@@ -1,3 +1,11 @@
 body{
     font-family: 'Roboto', sans-serif;
+    color:#07020D;
+}
+
+/* utilities */
+
+.container{
+ max-width: 960px;
+ margin: auto;
 }
