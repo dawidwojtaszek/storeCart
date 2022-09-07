@@ -1,0 +1,18 @@
+header{
+    height: 70px;
+    background-color: #5DB7DE;
+-webkit-box-shadow: 3px 3px 24px 0px rgba(200, 200, 200, 1);
+    -moz-box-shadow: 3px 3px 24px 0px rgba(200, 200, 200, 1);
+    box-shadow: 3px 3px 24px 0px rgba(200, 200, 200, 1);
+}
+.container{
+    max-width: 960px;
+    margin:auto;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding:10px;
+}
