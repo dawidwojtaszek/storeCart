@@ -1,12 +1,12 @@
 import "./App.css";
 import { Header } from "./components/header/header";
-import { ProductList } from "./components/product-list/product-list";
+import { FetchingProducts } from "./components/fetching-products/fetching-products";
 
 function App() {
   return (
     <div>
       <Header />
-      <ProductList />
+      <FetchingProducts />
     </div>
   );
 }
