@@ -1,6 +1,7 @@
 import "./header.scss";
 import { CartContext } from "../../Context/cart-context";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const { items } = useContext(CartContext);
@@ -16,7 +17,7 @@ export const Header = () => {
           <h1>Hello world</h1>
           <nav>
             <span>{itemsQuantity} </span>
-            <a>CART</a>
+            <Link to="/cart">CART</Link>
           </nav>
         </div>
       </div>

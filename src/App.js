@@ -1,13 +1,15 @@
 import "./App.css";
-import { Header } from "./components/header/header";
-import { FetchingProducts } from "./components/fetching-products/fetching-products";
 import { CartProvider } from "./Context/cart-context";
-
+import { Routes, Route } from "react-router-dom";
+import { HomePage } from "./Pages/homepage";
+import { CartPage } from "./Pages/cartPage";
 function App() {
   return (
     <CartProvider>
-      <Header />
-      <FetchingProducts />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/cart" element={<CartPage />} />
+      </Routes>
     </CartProvider>
   );
 }
