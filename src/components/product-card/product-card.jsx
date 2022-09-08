@@ -26,7 +26,7 @@ export const ProductCard = ({ id, title, price, imgUrl, rating }) => {
       <button
         className="add-to-cart-btn"
         onClick={() => {
-          addItems({ id: id, title: title, price: price });
+          addItems({ id: id, title: title, price: price, image: imgUrl });
           console.log(items);
         }}
       >

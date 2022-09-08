@@ -14,10 +14,12 @@ export const Header = () => {
     <header>
       <div className="container">
         <div className="navigation">
-          <h1>Hello world</h1>
+          <Link to="/">FakeStoreCart</Link>
           <nav>
             <span>{itemsQuantity} </span>
-            <Link to="/cart">CART</Link>
+            <Link to="/cart" className="cart-link">
+              CART
+            </Link>
           </nav>
         </div>
       </div>

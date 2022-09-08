@@ -1,8 +1,10 @@
 import { Header } from "../components/header/header";
+import { Cart } from "../components/cart/cart";
+import "./cartPage.scss";
 
 export const CartPage = () => (
-  <div>
+  <div className="cart-page">
     <Header />
-    <h3>Cart Page</h3>
+    <Cart />
   </div>
 );
