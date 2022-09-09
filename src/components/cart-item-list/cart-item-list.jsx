@@ -6,7 +6,7 @@ import "./cart-item-list.scss";
 export const CartItemList = () => {
   const { items } = useContext(CartContext);
   return (
-    <table>
+    <table className="cart-table">
       <thead>
         <tr>
           <th>Photo</th>

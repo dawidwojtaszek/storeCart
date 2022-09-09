@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ProductList } from "../product-list/product-list";
-
+import "./featching-products.scss";
 export const FetchingProducts = () => {
   let [itemList, setItemList] = useState(null);
   let [isLoading, setLoading] = useState(true);
@@ -27,7 +27,9 @@ export const FetchingProducts = () => {
   return (
     <div>
       {itemList === null ? (
-        <div>Loading...</div>
+        <div className="container">
+          <div className="loading-text">Loading...</div>
+        </div>
       ) : (
         <ProductList itemsList={itemList} />
       )}

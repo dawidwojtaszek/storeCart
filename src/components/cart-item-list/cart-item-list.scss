@@ -1,3 +1,25 @@
-table{
+.cart-table{
     margin-top: 50px;
+    border-collapse: collapse;
+    min-width: 90%;
+    & thead tr {
+        background-color: #161925;
+        color: #fff;
+        text-align: left;
+    }
+    & th, td {
+        padding:12px 15px;
+    }
+    & tbody tr {
+        border-bottom: 1px solid #E7E7E7;
+    }
+}
+.delete-btn{
+    font-size: 20px;
+    font-weight: bold;
+    background: none;
+    border-radius: 5px;
+    border: 3px solid #E7E7E7;
+    padding:5px;
+    cursor: pointer;
 }
