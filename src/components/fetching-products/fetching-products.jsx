@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ProductList } from "../product-list/product-list";
-import "./featching-products.scss";
+import { LoadingHandler } from "../loading-handler/loading-handler";
+
 export const FetchingProducts = () => {
   let [itemList, setItemList] = useState(null);
   let [isLoading, setLoading] = useState(true);
@@ -27,9 +28,7 @@ export const FetchingProducts = () => {
   return (
     <div>
       {itemList === null ? (
-        <div className="container">
-          <div className="loading-text">Loading...</div>
-        </div>
+        <LoadingHandler isError={isError} isLoading={isLoading} />
       ) : (
         <ProductList itemsList={itemList} />
       )}
