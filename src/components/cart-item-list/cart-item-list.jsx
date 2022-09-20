@@ -20,6 +20,7 @@ export const CartItemList = () => {
       <tbody>
         {items.map((item) => (
           <CartItem
+            id={item.id}
             key={item.id}
             name={item.title}
             quantity={item.quantity}

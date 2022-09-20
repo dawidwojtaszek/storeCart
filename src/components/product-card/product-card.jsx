@@ -3,12 +3,12 @@ import { useContext } from "react";
 import CartContext from "../../Context/cart-context";
 
 export const ProductCard = ({ id, title, price, imgUrl, rating }) => {
-  const { addItems, items } = useContext(CartContext);
+  const { addItems } = useContext(CartContext);
 
   return (
     <div className="product-card">
       <div className="img-box">
-        <img src={imgUrl} alt="product-photo" />
+        <img src={imgUrl} alt="product" />
       </div>
 
       <div className="info-box">
@@ -27,7 +27,6 @@ export const ProductCard = ({ id, title, price, imgUrl, rating }) => {
         className="add-to-cart-btn"
         onClick={() => {
           addItems({ id: id, title: title, price: price, image: imgUrl });
-          console.log(items);
         }}
       >
         Add to cart
