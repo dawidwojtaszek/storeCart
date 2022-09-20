@@ -25,9 +25,25 @@ export const CartProvider = ({ children }) => {
     const newItemsList = items.filter((fItem) => fItem.id !== itemId);
     setItems(newItemsList);
   };
+  const reduceItems = (itemId) => {
+    const existingItem = items.find((fItem) => fItem.id === itemId);
+    if (existingItem.quantity === 1) {
+      const newItemsList = items.filter(
+        (fItem) => fItem.id !== existingItem.id
+      );
+      setItems(newItemsList);
+    } else {
+      const newItemsList = items.map((fItem) =>
+        fItem.id === existingItem.id
+          ? { ...fItem, quantity: fItem.quantity - 1 }
+          : { ...fItem }
+      );
+      setItems(newItemsList);
+    }
+  };
 
   return (
-    <CartContext.Provider value={{ items, addItems, removeItem }}>
+    <CartContext.Provider value={{ items, addItems, removeItem, reduceItems }}>
       {children}
     </CartContext.Provider>
   );

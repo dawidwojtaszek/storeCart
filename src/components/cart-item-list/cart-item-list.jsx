@@ -26,6 +26,7 @@ export const CartItemList = () => {
             quantity={item.quantity}
             price={item.price}
             imgUrl={item.image}
+            title={item.title}
           />
         ))}
       </tbody>
